@@ -1,1 +1,1 @@
-# calendar-app
+# schedule-app
