@@ -7,14 +7,30 @@ timeclock()
 setInterval(timeclock, 1000)
 
 
-var input=document.getElementById("saveText");
-localStorage.setItem("server", input.val());
+$('.time-block').on('click', 'button', saveToLocal)
 
-var storedValue = localStorage.getItem("server");
-
-function saveData() {
-    localStorage.saveText
+function saveToLocal(event) {
+var element = event.target
+console.log(element)
 }
+// still need to type from pic
+
+
+while (hourCount <=17) {
+var taskText = localStorage.getItem(hourCount)
+console.log(taskText)
+hourCount ++;
+}
+}
+
+// var input=document.getElementById("saveText");
+// localStorage.setItem("server", input.val());
+
+// var storedValue = localStorage.getItem("server");
+
+// function saveData() {
+//     localStorage.saveText
+// }
 
 // var i = 0;
 // function change() {
