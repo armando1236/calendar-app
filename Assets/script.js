@@ -44,7 +44,7 @@ setInterval(timeclock, 1000)
 
 
 //funbtion for updating hour colors
-//grab current hour with momet js momen().hours() military time
+//grab current hour with moment js moment().hours() military time
 //Loop go through all th etime blocks and then run a conditional statement to compare current hour to each time block
 //vairable that stores that blocks hour grab by the time blocks id in html military time (arse string to interger)
 //if/else if
