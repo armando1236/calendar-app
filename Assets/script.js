@@ -8,14 +8,29 @@ setInterval(timeclock, 1000)
 
 
 
-var i = 0;
-function change() {
-  var doc = document.getElementById("timeBlock");
-  var color = ["#ff6961"];
-  doc.style.backgroundColor = color[i];
-  i = (i + 1) % color.length;
-}
-setInterval(change, );
+// var i = 0;
+// function change() {
+//   var doc = document.getElementById("timeBlock");
+//   var color = ["#ff6961];
+//   doc.style.backgroundColor = color[i];
+//   i = (i + 1) % color.length;
+// }
+// setInterval(change, 15000);
+
+
+var now = moment(); // new Date().getTime();
+var then = moment().add(60, 'minutes'); // new Date(now + 60 * 1000);
+
+$(".now").text(moment(now).format("H"));
+$(".then").text(moment(then).format("H"));
+$(".duration").text(moment(now).to(then));
+(function timerLoop() {
+  
+  $(".difference").text(moment().to(then));
+  $(".countdown").text(countdown(then).toString());
+  $(".hacked").animate("pwned");
+  requestAnimationFrame(timerLoop);
+})();
 
 
 
