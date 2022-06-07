@@ -1,3 +1,35 @@
+let timeclock = function() {
+    var time = moment().format('[It is currently ] dddd MM Do YYYY [ at ] hh:mm:ss a');
+    document.querySelector('#currentDay').innerHTML = time;
+}
+
+timeclock()
+setInterval(timeclock, 1000)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //reference the paragrpash for current day
 //save button and class add eventListeners on all save buttons
 
