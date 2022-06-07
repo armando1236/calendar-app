@@ -8,7 +8,14 @@ setInterval(timeclock, 1000)
 
 
 
-
+var i = 0;
+function change() {
+  var doc = document.getElementById("timeBlock");
+  var color = ["#ff6961"];
+  doc.style.backgroundColor = color[i];
+  i = (i + 1) % color.length;
+}
+setInterval(change, );
 
 
 
