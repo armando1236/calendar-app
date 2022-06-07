@@ -7,6 +7,14 @@ timeclock()
 setInterval(timeclock, 1000)
 
 
+var input=document.getElementById("saveText");
+localStorage.setItem("server", input.val());
+
+var storedValue = localStorage.getItem("server");
+
+function saveData() {
+    localStorage.saveText
+}
 
 // var i = 0;
 // function change() {
@@ -18,19 +26,21 @@ setInterval(timeclock, 1000)
 // setInterval(change, 15000);
 
 
-var now = moment(); // new Date().getTime();
-var then = moment().add(60, 'minutes'); // new Date(now + 60 * 1000);
+// var now = moment(); // new Date().getTime();
+// var then = moment().add(60, 'minutes'); // new Date(now + 60 * 1000);
 
-$(".now").text(moment(now).format("H"));
-$(".then").text(moment(then).format("H"));
-$(".duration").text(moment(now).to(then));
-(function timerLoop() {
+// $(".now").text(moment(now).format("H"));
+// $(".then").text(moment(then).format("H"));
+// $(".duration").text(moment(now).to(then));
+// (function timerLoop() {
   
-  $(".difference").text(moment().to(then));
-  $(".countdown").text(countdown(then).toString());
-  $(".hacked").animate("pwned");
-  requestAnimationFrame(timerLoop);
-})();
+//   $(".difference").text(moment().to(then));
+//   $(".countdown").text(countdown(then).toString());
+//   $(".hacked").animate("pwned");
+//   requestAnimationFrame(timerLoop);
+// })();
+
+
 
 
 
