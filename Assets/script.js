@@ -1,3 +1,5 @@
+
+// Time function displaying current time and date
 let timeclock = function() {
     var time = moment().format('[It is currently ] dddd MM Do YYYY [ at ] hh:mm:ss a');
     document.querySelector('#currentDay').innerHTML = time;
@@ -8,7 +10,7 @@ setInterval(timeclock, 1000)
 
 
 $('.time-block').on('click', 'button', saveToLocal)
-
+// Function saving text input to local storage
 function saveToLocal(event) {
 var element = event.target
 var hour = $(element).siblings('.hour').attr('id')
@@ -16,11 +18,22 @@ var task = $(element).siblings('textarea').val()
 console.log(element)
 localStorage.setItem(hour, task)
 console.log($(element).siblings('.hour').attr('id'))
+
 }
 
 function loadFromLocal() {
     var hourCount = 9
 }
+
+
+// var Hour9 = document.getElementById(9)
+
+
+// function colors () {
+//     if (time < 9){
+//         Hour9.style. backgroundColor. black;
+//     }
+// }
 
 
 
