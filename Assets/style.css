@@ -60,6 +60,9 @@ textarea{
   color: white;
 }
 
+span {
+  pointer-events: none;
+}
 .future {
   background-color: #77dd77;
   color: white;

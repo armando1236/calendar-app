@@ -11,17 +11,25 @@ $('.time-block').on('click', 'button', saveToLocal)
 
 function saveToLocal(event) {
 var element = event.target
+var hour = $(element).siblings('.hour').attr('id')
+var task = $(element).siblings('textarea').val()
 console.log(element)
+localStorage.setItem(hour, task)
+console.log($(element).siblings('.hour').attr('id'))
 }
-// still need to type from pic
+
+function loadFromLocal() {
+    var hourCount = 9
+}
 
 
-while (hourCount <=17) {
-var taskText = localStorage.getItem(hourCount)
-console.log(taskText)
-hourCount ++;
-}
-}
+
+// while (hourCount <=17) {
+// var taskText = localStorage.getItem(hourCount)
+// console.log(taskText)
+// hourCount ++;
+// }
+
 
 // var input=document.getElementById("saveText");
 // localStorage.setItem("server", input.val());
