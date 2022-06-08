@@ -1,3 +1,12 @@
+var timeBlockEls = $(".time-block")
+console.log(timeBlockEls)
+timeBlockEls.each(function(i,block){
+    var blockId = $(block).attr("id")
+    var localText = localStorage.getItem(parseInt(blockId)) || ""
+    $(block).children("textarea").val(localText)
+    console.log(localText)
+    console.log(blockId)
+})
 
 // Time function displaying current time and date
 let timeclock = function() {
@@ -13,7 +22,7 @@ $('.time-block').on('click', 'button', saveToLocal)
 // Function saving text input to local storage
 function saveToLocal(event) {
 var element = event.target
-var hour = $(element).siblings('.hour').attr('id')
+var hour = $(element).parent('.time-block').attr('id')
 var task = $(element).siblings('textarea').val()
 console.log(element)
 localStorage.setItem(hour, task)
@@ -21,9 +30,19 @@ console.log($(element).siblings('.hour').attr('id'))
 
 }
 
+
 function loadFromLocal() {
     var hourCount = 9
 }
+
+
+
+
+
+
+
+
+
 
 
 // var Hour9 = document.getElementById(9)
